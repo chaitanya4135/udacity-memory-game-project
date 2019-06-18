@@ -1,0 +1,164 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* styles for html and body */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* style for body */
+body {
+  /* Background pattern from Subtle Patterns */
+  font-family: 'Coda', cursive;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  animation: Gradient 2s ease infinite;
+}
+
+/* styles for cointainer */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* h1 tag styles are done below */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+.deck {
+  width: 660px;
+  min-height: 680px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 12px rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+/* styles for cards */
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #2e3d49;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+/* styles when you open the card */
+.deck .card.open {
+  background: #02b3e4;
+  cursor: default;
+  transform: rotatey(180deg);
+}
+
+/* styles for card when you show the card */
+.deck .card.show {
+  font-size: 33px;
+  transform: rotatey(180deg);
+}
+
+/* styles for card when two card matches */
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+/* styles when the cards notmatch */
+.deck .card.unmatch {
+  cursor: default;
+  font-size: 33px;
+  transform: rotatey(180deg);
+}
+
+.disable {
+  pointer-events: none;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+/* applying styles for stars */
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  color: #ffd700;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* below styles are applied when you restart the deck */
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+/* media queries for mobile */
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+
+  /* deck styles for mobile */
+  .deck {
+    width: 300px;
+    min-height: 300px;
+  }
+
+  /* card styles for mobile */
+  .deck .card {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/*media query for ipad*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* deck styles for ipad */
+  .deck {
+    width: 700px;
+    min-height: 700px;
+  }
+
+  /* card styles for ipad */
+  .deck .card {
+    width: 130px;
+    height: 130px;
+  }
+}
