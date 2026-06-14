@@ -1,5 +1,8 @@
 # Memory Game Project
 
+## Click Below link to play game
+https://chaitanya4135.github.io/udacity-memory-game-project/
+
 ## Table of Contents
 
 * [Instructions](#instructions)
